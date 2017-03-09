@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Imagine this is in the executables directory of your rails/node/whatever app and you're making changes to some views.
+# Use this to automatically reload all the browser when you save some changes.
+
+## Run this at the root of the gem directory
+## `brew install entr` as entr is a requirement
+find app -type f | entr -c sh -c 'bin/reloadChrome; bin/reloadFirefox; bin/reloadSafari'

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+echo "Reloading Firefox Developer Edition..."
+
+osascript -e 'set previous_app to path to frontmost application as text
+              activate application "Firefox Developer Edition"
+              tell application "System Events" to keystroke "r" using command down
+              activate application previous_app'

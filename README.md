@@ -1,29 +1,15 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+A quick exploration of using `entr` to watch for filechanges.
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* `brew install entr` if you have homebrew installed. `entr` is an open source project hosted on http://entrproject.org.
 
-### Contribution guidelines ###
+### How do I do stuff? ###
 
-* Writing tests
-* Code review
-* Other guidelines
+`entr [-cdprs] utility [argument /_ ...]`
 
-### Who do I talk to? ###
+`entr` takes a list of whitespace separated file paths from standard input and watches them for changes. The fun part is that you're able to supply an arbitrary command to run which can be pretty much anything. It can be a test, or to automatically build a project, a script, or even a child process entr can restart on its own when you supply the `-r` flag - like a server or a daemon. I dunno - it's useful!
 
-* Repo owner or admin
-* Other community or team contact
+There's a few examples in this project to help you get started.

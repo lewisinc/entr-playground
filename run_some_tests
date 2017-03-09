@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+# Run this at the root of the gem directory
+# `brew install entr` as entr is a requirement
+
+ls -d my_app.gemspec spec/*.rb lib/*.rb lib/my_app/*.rb lib/my_app/*/*.rb | entr -c sh -c 'bundle exec rspec spec'
