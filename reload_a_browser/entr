@@ -5,4 +5,4 @@
 
 ## Run this at the root of the gem directory
 ## `brew install entr` as entr is a requirement
-find app -type f | entr -c sh -c 'bin/reloadChrome; bin/reloadFirefox; bin/reloadSafari'
+find app -type f | entr -c sh -c './reloadChrome; ./reloadFirefox; ./reloadSafari'
